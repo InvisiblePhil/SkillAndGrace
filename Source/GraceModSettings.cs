@@ -1,20 +1,7 @@
-﻿using UnityEngine;
-using Verse;
+﻿using Verse;
 
 namespace SkillAndGrace
 {
-    // todo: not sure if this will be needed
-    //[HarmonyPatch(typeof(DefGenerator))]
-    //[HarmonyPatch(nameof(DefGenerator.GenerateImpliedDefs_PostResolve))]
-    //public class GraceModSettingsJockey
-    //{
-    //    internal static void Postfix()
-    //    {
-
-    //    }
-    //}
-
-
     /// <summary>
     /// Global settings
     /// </summary>
