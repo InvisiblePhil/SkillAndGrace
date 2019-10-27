@@ -8,7 +8,7 @@ namespace SkillAndGrace
     /// <summary>
     /// Class to add prefix hook to the 'SkillRecord.Interval' method, which is the method that implements skill decay
     /// </summary>
-    [HarmonyPriority(Priority.HigherThanNormal)]
+    [HarmonyPriority(Priority.First)]
     [HarmonyPatch(typeof(SkillRecord))]
     [HarmonyPatch(nameof(SkillRecord.Interval))]
     internal static class SkillRecordInterval
@@ -43,8 +43,7 @@ namespace SkillAndGrace
             => ticksSinceLastUse < SkillAndGraceSettings.GracePeriodTicks * GraceMultiplier(pawn, instance);
 
         private static float GraceMultiplier(Pawn pawn, SkillRecord instance) 
-            => PassionMultiplier(instance) 
-               * GreatMemoryMultiplier(pawn);
+            => PassionMultiplier(instance) + GreatMemoryMultiplier(pawn);
 
         private static float GreatMemoryMultiplier(Pawn pawn)
             => pawn.story.traits.HasTrait(TraitDefOf.GreatMemory)

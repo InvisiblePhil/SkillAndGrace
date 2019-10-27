@@ -23,7 +23,7 @@ namespace SkillAndGrace
         /// <summary>
         /// Number of hours since increasing a skill before skill decay takes place
         /// </summary>
-        public static int GracePeriodHours;
+        public static int GracePeriodHours = 12;
 
         /// <summary>
         /// Number of ticks 
@@ -53,19 +53,8 @@ namespace SkillAndGrace
             Scribe_Values.Look(ref PassionGraceMultiplierPercent, GraceSkillHelpers.SerialisationLabel(nameof(PassionGraceMultiplierPercent)));
             Scribe_Values.Look(ref BurningPassionGraceMultiplierPercent, GraceSkillHelpers.SerialisationLabel(nameof(BurningPassionGraceMultiplierPercent)));
             Scribe_Values.Look(ref GreatMemoryGraceMultiplierPercent, GraceSkillHelpers.SerialisationLabel(nameof(GreatMemoryGraceMultiplierPercent)));
-        }
 
-        public void DoSettingsWindowContents(Rect rect)
-        {
-            var list = new Listing_Standard(GameFont.Small)
-            {
-                ColumnWidth = rect.width / 3
-            };
-
-            list.Begin(rect);
-
-            list.Gap();
-
+            Log.Message($"SkillAndGrace initialised. GracePeriod: {GracePeriodHours}, PassionMultiplier: {PassionGraceMultiplierPercent}, BurningPassionMultiplier: {BurningPassionGraceMultiplierPercent}, GreatMemoryMultiplier: {GreatMemoryGraceMultiplierPercent}");
         }
     }
 }

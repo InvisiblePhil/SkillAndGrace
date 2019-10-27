@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <SkillAndGrace_SettingsCategory>Skill And Grace</SkillAndGrace_SettingsCategory>
+  
+  <SkillAndGrace_GracePeriodLabel>Grace Period</SkillAndGrace_GracePeriodLabel>
+  <SkillAndGrace_GracePeriodTip>Number of hours after last usage of a skill before degradation should occur.
+Set to 0 to disable the effects of this mod.</SkillAndGrace_GracePeriodTip>
+  
+  <SkillAndGrace_GreatMemoryLabel>Great Memory Multiplier</SkillAndGrace_GreatMemoryLabel>
+  <SkillAndGrace_GreatMemoryTip>A multiplier to the grace period for pawns with the Great Memory trait.</SkillAndGrace_GreatMemoryTip>
+  
+  <SkillAndGrace_PassionMultiplerLabel>Passion Multiplier</SkillAndGrace_PassionMultiplerLabel>
+  <SkillAndGrace_PassionMultiplerTip>A multiplier to the grace period for skills where the pawn has a passion</SkillAndGrace_PassionMultiplerTip>
+  
+  <SkillAndGrace_BurningPassionMultiplierLabel>Burning Passion Multiplier</SkillAndGrace_BurningPassionMultiplierLabel>
+  <SkillAndGrace_BurningPassionMultiplierTip>A multiplier to the grace period for skills where the pawn has a burning passion.</SkillAndGrace_BurningPassionMultiplierTip>
+</LanguageData>

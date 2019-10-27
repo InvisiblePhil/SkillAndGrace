@@ -2,7 +2,11 @@
 <ModMetaData>
 	<name>Skill And Grace</name>
 	<author>InvisiblePhil</author>
-	<targetVersion>1.0.2059</targetVersion>
+	<supportedVersions>
+    <li>
+      1.0
+    </li>
+  </supportedVersions>
 	<description>
     This mod allows configuration of a 'grace period' for skill degradation; a period before skill degradation occurs after using a skill.
   </description>
