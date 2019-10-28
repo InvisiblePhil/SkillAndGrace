@@ -25,13 +25,6 @@ namespace SkillAndGrace
             var pawn = __instance.GetPawn();
             var grace = pawn.GetGrace();
 
-            // todo: Remove this check when the mod actually works
-            if (grace == null)
-            {
-                GraceSkillHelpers.LogNullGrace();
-                return;
-            }
-
             GraceSkillHelpers.SetSkillUsed(grace, __instance);
         }
     }

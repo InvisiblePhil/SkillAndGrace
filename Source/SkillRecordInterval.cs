@@ -24,13 +24,6 @@ namespace SkillAndGrace
             
             var grace = pawn.GetGrace();
             
-            // todo: Remove this check when the mod actually works
-            if (grace == null)
-            {
-                GraceSkillHelpers.LogNullGrace();
-                return true;
-            }
-
             if (!GraceSkillHelpers.TryGetTimeSinceLastUse(grace, __instance, out var ticksSinceLastUse))
             {
                 return true;
