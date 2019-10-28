@@ -51,7 +51,7 @@ namespace SkillAndGrace
         private static void LabelledInputBox(Listing list, ref int value, int min, int max, string label, string tooltip)
         {
             var buffer = value.ToString();
-            var rectLine = list.GetRect(Text.LineHeight);
+            var rectLine = list.GetRect(Text.LineHeight * 2);
             var rectLeft = rectLine.LeftHalf().Rounded();
             var rectRight = rectLine.RightHalf().Rounded();
 

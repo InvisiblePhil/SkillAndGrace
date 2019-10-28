@@ -55,7 +55,7 @@
     <Compile Include="GraceProperties.cs" />
     <Compile Include="GraceSkill.cs" />
     <Compile Include="GraceSkillHelpers.cs" />
-    <Compile Include="Mod.cs" />
+    <Compile Include="SkillAndGraceMod.cs" />
     <Compile Include="SkillRecordInterval.cs" />
     <Compile Include="GraceModSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
