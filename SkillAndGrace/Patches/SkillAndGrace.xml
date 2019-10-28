@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[thingClass="Pawn"]/comps</xpath>
-		<value>
-      <li>
-        <compClass>SkillAndGrace.GraceComp</compClass>
-      </li>
-		</value>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[thingClass="Pawn"]/comps</xpath>
+      <value>
+        <li>
+          <compClass>SkillAndGrace.GraceComp</compClass>
+        </li>
+        <!--li Class="SkillAndGrace.GraceComp">
+            
+        </li-->
+      </value>
+    </match>
 	</Operation>
 
 </Patch>

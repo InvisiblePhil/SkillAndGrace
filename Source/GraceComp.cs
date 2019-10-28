@@ -12,13 +12,28 @@ namespace SkillAndGrace
     {
         public GraceProperties Properties => (GraceProperties) props;
 
+        public override void Initialize(CompProperties props)
+        {
+            // hack: I gave up on trying to define XML for an empty list...
+            base.Initialize(new GraceProperties());
+        }
+
         public override void CompTickRare()
         {
             base.CompTickRare();
 
-            if (!(parent is Pawn pawn)
-                || pawn.Dead
-                || IsInStasis(pawn))
+            if (!(parent is Pawn pawn))
+            {
+                // Shouldn't happen but whatever
+                return;
+            }
+
+            if (pawn.Dead)
+            {
+                return;
+            }
+
+            if (IsInStasis(pawn))
             {
                 return;
             }
@@ -31,7 +46,7 @@ namespace SkillAndGrace
             var holder = pawn.ParentHolder;
 
             return holder != null
-                && ThingOwnerUtility.ContentsSuspended(holder);
+                   && ThingOwnerUtility.ContentsSuspended(holder);
         }
 
         private void IncrementAllPeriodsByOneRareTick()
@@ -46,7 +61,7 @@ namespace SkillAndGrace
         {
             base.PostExposeData();
 
-            Scribe_Collections.Look(ref Properties.SkillPeriods, GraceSkillHelpers.SerialisationLabel(nameof(GraceProperties.SkillPeriods)));
+            Scribe_Collections.Look(ref Properties.SkillPeriods, GraceSkillHelpers.SerialisationLabel(nameof(GraceProperties.SkillPeriods)), LookMode.Deep);
         }
     }
 }

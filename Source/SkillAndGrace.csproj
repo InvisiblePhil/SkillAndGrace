@@ -37,7 +37,7 @@
     </Reference>
     <Reference Include="Assembly-CSharp, Version=1.0.7213.22423, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SkillAndGrace\Assemblies\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\External\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SkillAndGrace\Assemblies\UnityEngine.dll</HintPath>
+      <HintPath>..\External\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -64,12 +64,7 @@
     <Compile Include="TranslatedStrings.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-
   <Target Name="CopyDLLToRelease" AfterTargets="AfterBuild">
-    <Copy
-      SourceFiles="$(TargetPath)"
-      DestinationFolder="$(SolutionDir)SkillAndGrace\Assemblies"
-      />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SolutionDir)SkillAndGrace\Assemblies" />
   </Target>
-
 </Project>
